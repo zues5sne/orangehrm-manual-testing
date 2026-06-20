@@ -1,4 +1,4 @@
-/># BUG-002: Session Not Invalidated After Logout
+# BUG-002: Session Not Invalidated After Logout
 
 | Field | Detail |
 |---|---|
