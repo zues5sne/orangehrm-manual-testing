@@ -1,22 +1,35 @@
-BUG-001 — Username Login is Case-Insensitive
+# BUG-001: Username Login Is Case-Insensitive
 
-FieldDetailSeverityMediumPriorityMediumModuleLogin / SecurityTC ReferenceTC_008EnvironmentChrome 124 / Windows 11
+| Field | Detail |
+|---|---|
+| **Bug ID** | BUG-001 |
+| **Severity** | Medium |
+| **Priority** | Medium |
+| **Status** | Open |
+| **Module** | Login / Security |
+| **TC Reference** | TC_008 |
+| **Found Date** | 14/06/2026 |
+| **Environment** | Chrome 124 / Windows 11 |
 
-Steps to Reproduce
+## Steps to Reproduce
 
+1. Navigate to `https://opensource-demo.orangehrmlive.com`
+2. Enter Username: `ADMIN` (all caps)
+3. Enter Password: `admin123`
+4. Click Login
 
-Navigate to https://opensource-demo.orangehrmlive.com
-Enter Username: ADMIN (all caps)
-Enter Password: admin123
-Click Login
+## Expected Result
 
+Login fails with error: "Invalid credentials". Username field should be case-sensitive — `ADMIN` should not be treated the same as `Admin`.
 
-Expected Result
-Login fails with error: "Invalid credentials". Username should be case-sensitive.
+## Actual Result
 
-Actual Result
-Login succeeds with username "ADMIN" (all caps). System is NOT case-sensitive for the username field. No error message displayed.
+Login succeeds with username `ADMIN` (all caps). System is NOT case-sensitive for the username field. No error message displayed.
 
-Reference: NFR-S01 — Authentication Security
+## Reference
 
-Screenshoot : 
+NFR-S01 — Authentication Security
+
+## Screenshot
+
+*[Đính ảnh chụp màn hình login thành công với username ADMIN vào đây]*
