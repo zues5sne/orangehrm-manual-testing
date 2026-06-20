@@ -32,4 +32,7 @@ NFR-S01 — Authentication Security
 
 ## Screenshot
 
-*[Đính ảnh chụp màn hình login thành công với username ADMIN vào đây]*
+1.<img width="1918" height="870" alt="image" src="https://github.com/user-attachments/assets/843dd7c1-04c1-4e7e-acfc-85d595498670" />
+2.<img width="1918" height="965" alt="image" src="https://github.com/user-attachments/assets/364ad51c-d993-4458-8ce8-df7d1e0343af" />
+
+
