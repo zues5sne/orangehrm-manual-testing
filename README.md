@@ -1,120 +1,196 @@
-# OrangeHRM — Manual Testing Portfolio
+# 🧪 OrangeHRM Manual Testing Portfolio
 
-Manual functional testing project on the [OrangeHRM](https://opensource-demo.orangehrmlive.com) open-source HRMS demo. Built as a hands-on QA portfolio — covering requirement analysis, test design, execution, and bug reporting across four core modules.
+> **Manual Functional Testing** project for [OrangeHRM](https://opensource-demo.orangehrmlive.com) — an open-source Human Resource Management System (HRMS).  
+> This project demonstrates end-to-end QA skills including requirement analysis, test planning, test design, execution, and bug reporting on a real-world enterprise-style application.
 
 ---
 
-## 🎯 Project Overview
+## 📋 Project Overview
 
-| | |
+| Field | Detail |
 |---|---|
-| **System Under Test** | [OrangeHRM Open Source Demo](https://opensource-demo.orangehrmlive.com) |
-| **Test Type** | Manual Functional Testing |
-| **Modules Covered** | Login, PIM / My Info, Leave, Directory |
-| **User Roles** | Admin, ESS User (Employee Self Service) |
-| **Functional Requirements** | 28 |
-| **Test Cases** | 50 |
-| **Pass Rate** | 94% (47/50) |
-| **Bugs Found** | 3 |
-
-This project simulates a real QA workflow on a live HR system — from reading the application's behavior, to writing structured test cases, to actually finding and documenting defects.
+| **Website Under Test** | https://opensource-demo.orangehrmlive.com |
+| **Application Type** | HR Management System (Symfony backend, Vue.js frontend) |
+| **Testing Type** | Manual Functional Testing |
+| **Tester** | Nguyễn Long Vũ |
+| **Test Period** | 10/06/2026 — 20/06/2026 |
+| **Environment** | Chrome 124 / Windows 11 / 1920×1080 |
 
 ---
 
-## 📂 Repository Structure
+## 📊 Test Results Summary
 
-```
-orangehrm-manual-testing/
-├── docs/             → Requirements analysis & test planning documents
-├── Test-case/        → Test cases by module (.md)
-├── Bug_report/        → Defects found during execution (.md)
-├── Test-summary/      → Test execution summary & results (.md)
-└── README.md
-```
-
-| Folder | Contents |
+| Metric | Result |
 |---|---|
-| [`docs/`](./docs) | Requirements & Analysis Document, Test Plan |
-| [`Test-case/`](./Test-case) | Manually written test cases — happy path, negative, boundary, and permission scenarios |
-| [`Bug_report/`](./Bug_report) | Defect reports with repro steps, expected vs. actual result, and severity |
-| [`Test-summary/`](./Test-summary) | Execution results and overall test summary |
+| **Total Test Cases** | 50 |
+| **Passed** | 47 |
+| **Failed** | 3 |
+| **Pass Rate** | 94% |
+| **Bugs Found** | 3 confirmed bugs |
+| **Overall Status** | ✅ PASSED with 3 defects found |
 
----
+### Results by Module
 
-## 📊 Results by Module
-
-| Module | Test Cases | Pass | Fail | Pass Rate |
+| Module | Total TC | Pass | Fail | Pass Rate |
 |---|---|---|---|---|
 | 🔐 Login | 12 | 10 | 2 | 83.3% |
 | 📋 PIM / My Info | 15 | 14 | 1 | 93.3% |
 | 🏖️ Leave | 15 | 15 | 0 | 100% |
 | 📁 Directory | 8 | 8 | 0 | 100% |
-| **Total** | **50** | **47** | **3** | **94%** |
-
-> Test Period: 10/06/2026 – 20/06/2026 · Environment: Chrome 124 / Windows 11 / 1920×1080
+| **TOTAL** | **50** | **47** | **3** | **94%** |
 
 ---
 
-## 🧩 Scope
+## 🐛 Bugs Found
 
-**In Scope**
-- Login / Authentication
-- PIM — Employee Profile & My Info
-- Leave — Apply, Approve, Reject, Cancel
-- Directory — Search & Filter
+| Bug ID | Title | Severity | Status | Report |
+|---|---|---|---|---|
+| BUG-001 | Username login is case-insensitive — "ADMIN" accepted same as "Admin" | Medium | Open | [BugID-001.md](./Bug_report/BugID-001.md) |
+| BUG-002 | Session not invalidated after logout — Back button restores Dashboard access | High | Open | [BugID-002.md](./Bug_report/BugID-002.md) |
+| BUG-003 | Auto-generated Employee ID may duplicate existing IDs | Medium | Open | [BugID-003.md](./Bug_report/BugID-003.md) |
 
-**Out of Scope**
-- Performance, Recruitment, Payroll modules
-- Automated testing
-- Mobile / responsive testing
+Full tracking also available in [GitHub Issues](https://github.com/zues5sne/orangehrm-manual-testing/issues).
 
-A key focus of this project is **role-based permission testing** — verifying that Admin-only actions (managing employees, approving leave) are correctly blocked for ESS Users, and that ESS Users can only access their own data.
+---
 
-| Feature | Admin | ESS User |
+## 📁 Repository Structure
+
+```
+orangehrm-manual-testing/
+│
+├── README.md                       ← You are here
+│
+├── docs/
+│   ├── RAD.md                      ← Requirement Analysis Document
+│   ├── Test_plan.md                ← Test Plan (ISTQB-style approach)
+│   └── Test_scenario.md            ← 47 Test Scenarios across 4 modules
+│
+├── Test-case/
+│   └── OrangeHRM_test-case.xlsx    ← 50 Test Cases with execution results
+│
+├── Bug_report/
+│   ├── BugID-001.md
+│   ├── BugID-002.md
+│   └── BugID-003.md
+│
+└── Test-summary/
+    └── TEST_SUMMARY_REPORT.md      ← Final test summary and recommendations
+```
+
+---
+
+## 📄 Documents
+
+| Document | Description | Link |
 |---|---|---|
-| Add / Delete Employee | ✅ Allowed | ⛔ Must be blocked |
-| Approve / Reject Leave | ✅ Allowed | ⛔ Must be blocked |
-| Apply Own Leave | ✅ Allowed | ✅ Allowed |
-| View Directory | ✅ Allowed | ✅ Allowed |
+| 📋 Requirement Analysis (RAD) | System analysis, 28 FR, 47 Test Scenarios, User Flow | [View](./docs/RAD.md) |
+| 📝 Test Plan | Scope, Strategy, Entry/Exit Criteria, Risks | [View](./docs/Test_plan.md) |
+| 🗂️ Test Scenario | 47 scenarios across 4 modules | [View](./docs/Test_scenario.md) |
+| ✅ Test Cases | 50 TC with Steps, Expected & Actual Result, Status | [View](./Test-case/OrangeHRM_test-case.xlsx) |
+| 🐛 Bug Reports | 3 confirmed bugs with steps and impact | [View folder](./Bug_report/) |
+| 📊 Test Summary | Final results, metrics, recommendations | [View](./Test-summary/TEST_SUMMARY_REPORT.md) |
 
 ---
 
-## 🐞 Confirmed Bugs
+## 🔍 Modules Tested
 
-3 defects found and logged during test execution (50 test cases, 94% pass rate):
+### 1. 🔐 Login
+- Valid login with both Admin and ESS User accounts
+- Invalid credentials — error message validation
+- Empty field validation
+- Password masking
+- Case sensitivity & whitespace handling
+- Session behavior after logout (security check)
 
-| Bug ID | Module | Severity | Issue |
-|---|---|---|---|
-| BUG-002 | Login | 🔴 High | Session not invalidated after logout — browser Back button restores Dashboard access without re-authentication |
-| BUG-001 | Login | 🟠 Medium | Username login is case-insensitive — `ADMIN` is accepted the same as `Admin` |
-| BUG-003 | PIM | 🟠 Medium | Auto-generated Employee ID can suggest a value that already exists — caught at save time, but not validated before being shown |
+### 2. 📋 PIM / My Info
+- Add / edit / delete employee records
+- Auto-generated Employee ID
+- Personal Details & Contact Details management
+- Profile photo upload (format & size validation)
+- Search employee by full / partial name
+- Role-based access — ESS User restricted to own profile
 
-**Must fix:** BUG-002 — a real security risk on shared machines, since a logged-out session can still be accessed via Back button.
+### 3. 🏖️ Leave
+- Leave Entitlement assignment (precondition)
+- Apply Leave with valid / invalid date ranges
+- Boundary cases: same-day leave, weekend handling
+- Admin Approve / Reject leave requests
+- Cancel Pending leave requests
+- Leave history filtering by date range
+- Role-based access — ESS User cannot approve own/others' leave
 
-Full details — steps to reproduce, expected vs. actual result — are in [`Bug_report/`](./Bug_report) and the [Test Summary Report](./Test-summary).
+### 4. 📁 Directory
+- Search employee by full / partial name
+- Filter by Job Title and Location
+- Employee card display (photo, name, job title)
+- Filter consistency check across repeated attempts
 
 ---
 
-## 🛠️ How to Reproduce This Testing
+## 🧪 Test Accounts Used
 
-1. Go to the demo site: `https://opensource-demo.orangehrmlive.com`
-2. Log in as Admin: `Admin / admin123`
-3. Create an ESS User account (**Admin → User Management → Add User**, role: ESS, linked to an employee)
-4. Assign a Leave Entitlement to that employee (**Leave → Entitlements → Add Entitlements**) — required before the ESS User can apply for leave
-5. Use the test cases in [`Test-case/`](./Test-case) to execute manually, recording actual results against expected results
-
----
-
-## 📝 Notes
-
-- Leave duration correctly excludes weekends — a Friday-to-Monday range resolves to 2 working days, not 4. This was an initial testing assumption error on my part, corrected after actually running the test (see TC_034 in the Test Summary Report).
-- ESS User role permissions are properly enforced across PIM and Leave — cannot view other employees' profiles or approve leave for others.
-- This is a public demo environment shared by many testers — data may be reset or modified by others, which can affect reproducibility.
-- This project is part of an ongoing QA portfolio. Feedback and suggestions are welcome via [Issues](../../issues).
+| Account | Type | Purpose |
+|---|---|---|
+| `Admin` / `admin123` | Admin | Full access — Happy path & administrative testing |
+| `testess` / `Test@1234` | ESS User | Created manually — used to test role-based permission restrictions |
 
 ---
 
-## 👤 Author
+## 🛠️ Tools Used
 
-**Nguyễn Long Vũ** — Fresher QA Tester
-📧 [your-email@gmail.com](mailto:0945862729vu@gmail.com) · 💻 [GitHub](https://github.com/zues5sne)
+| Tool | Purpose |
+|---|---|
+| Google Chrome 124 | Primary test browser |
+| Google Sheets | Test Case management & execution tracking |
+| GitHub Issues | Bug tracking |
+| Snipping Tool | Screenshot evidence |
+
+---
+
+## 🔑 Key Findings
+
+### ✅ What Works Well
+- Full Leave workflow (Apply → Approve/Reject → Balance update) functions correctly end-to-end
+- Leave day calculation correctly excludes weekends — Friday-to-Monday range correctly counted as 2 working days, not 4
+- ESS User role permissions are properly enforced across PIM and Leave modules
+- Directory search (exact and partial match) and filtering work as expected
+- Form validations (required fields) work consistently across all tested modules
+
+### ⚠️ Issues Found
+- **Security (High):** Logout does not fully invalidate the session — Back button restores Dashboard access without re-authentication (BUG-002)
+- **Security (Medium):** Username field is case-insensitive — "ADMIN" accepted the same as "Admin" (BUG-001)
+- **Data Integrity (Medium):** Auto-generated Employee ID can suggest an ID that already belongs to another employee (BUG-003)
+
+### 💡 Personal Notes
+During testing, I discovered that:
+- **TC_028** required assigning a Leave Entitlement before ESS User could apply for leave — this precondition wasn't obvious from the UI and cost ~30 minutes to figure out
+- **TC_034** — initially assumed weekends would be included in leave duration (4 days for Fri–Mon); actual testing showed the system correctly excludes weekends (2 days). Expected Result was revised accordingly
+- **TC_016** — found that auto-generated Employee IDs can duplicate existing ones; the system does catch it at save time but the UX around it is confusing
+- **TC_008** — system accepts "ADMIN" the same as "Admin" (not case-sensitive), while **TC_009** correctly rejects extra whitespace in the username — an inconsistent validation approach worth noting
+
+---
+
+## 📈 Exit Criteria Status
+
+| Criterion | Status |
+|---|---|
+| All planned Test Cases executed | ✅ 50/50 |
+| All Critical/High FRs verified | ✅ Met |
+| All discovered defects logged with severity | ✅ 3/3 on GitHub Issues |
+| Test Summary Report completed | ✅ Done |
+
+---
+
+## 📌 How to Review This Portfolio
+
+1. Start with **[RAD](./docs/RAD.md)** to understand the system and requirements
+2. Review **[Test Plan](./docs/Test_plan.md)** for testing strategy and scope
+3. Check **[Test Scenarios](./docs/Test_scenario.md)** for coverage overview
+4. Open **[Test Cases (Excel)](./Test-case/OrangeHRM_test-case.xlsx)** to see detailed execution results
+5. Review **[Bug Reports](./Bug_report/)** for the 3 confirmed defects
+6. Read **[Test Summary Report](./Test-summary/TEST_SUMMARY_REPORT.md)** for final conclusions and recommendations
+
+---
+
+*Manual Testing Portfolio — Nguyễn Long Vũ — 2026*  
+*OrangeHRM | opensource-demo.orangehrmlive.com*
