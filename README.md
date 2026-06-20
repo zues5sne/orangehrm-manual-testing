@@ -117,4 +117,4 @@ Full details — steps to reproduce, expected vs. actual result — are in [`Bug
 ## 👤 Author
 
 **Nguyễn Long Vũ** — Fresher QA Tester
-📧 [your-email@gmail.com](mailto:your-email@gmail.com) · 🔗 [LinkedIn](#) · 💻 [GitHub](https://github.com/zues5sne)
+📧 [your-email@gmail.com](mailto:0945862729vu@gmail.com) · 💻 [GitHub](https://github.com/zues5sne)
