@@ -1,6 +1,6 @@
 # OrangeHRM — Test Plan
 
-> **Manual Testing Portfolio | ISTQB-style approach**
+> **Manual Testing Portfolio  **
 
 | | |
 |---|---|
