@@ -1,4 +1,4 @@
-# BUG-002: Session Not Invalidated After Logout
+/># BUG-002: Session Not Invalidated After Logout
 
 | Field | Detail |
 |---|---|
@@ -37,4 +37,13 @@ NFR-S03 — Session Invalidation on Logout
 
 ## Screenshot
 
-*[Đính ảnh chụp màn hình Dashboard hiện ra sau khi bấm Back vào đây]*
+1.Click logout buuton on header
+<img width="581" height="440" alt="image" src="https://github.com/user-attachments/assets/792b4ccf-df7d-4051-92fd-c7089d334001" />
+
+2.Click back button
+<img width="1272" height="965" alt="image" src="https://github.com/user-attachments/assets/3ced06af-4963-4440-b901-ff95b1f4389c" />
+
+3.Observe result -> session not invalidated after logout
+<img width="1918" height="975" alt="image" src="https://github.com/user-attachments/assets/c37d2981-dd61-4047-aef7-4ecc4fc3f7d8" />
+
+
