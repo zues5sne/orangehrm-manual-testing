@@ -37,4 +37,5 @@ FR-PIM-007 — Employee ID auto-generated when adding a new employee
 
 ## Screenshot
 
-*[Đính ảnh chụp màn hình thông báo lỗi "Employee Id already exists" vào đây]*
+<img width="1480" height="492" alt="image" src="https://github.com/user-attachments/assets/6dff1d95-5813-48e3-9c03-d86512075447" />
+
